@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .menu-24h-main {
+        --bg-menu-header: #0099ff;
+        --bg-click-slide-menu: #00ffff;
+        --bg-click-slide-menu-close: #3366ff;
+        --hover-link-menu-header: rgb(0, 0, 0, 30%);
+        --hover-link-submenu-header: #00ccff;
+        --border-top-submenu-header: #3c811e;
+        --color-link-submenu-header: #33cc99;
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 190px;
+        width: 750px;
+        background: var(--bg-menu-header);
+        z-index: 9999;
+      }
+
+      .menu1 {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .menu1 li {
+        display: inline-block;
+        margin-left: 15px;
+        margin-right: 40px;
+        margin-top: 15px;
+      }
+
+      .menu1 li:hover {
+        background-color: var(--hover-link-menu-header);
+      }
+
+      .menu1 li:hover .submenu {
+        display: block;
+      }
+
+      .menu2 {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .menu2 li {
+        display: inline-block;
+        margin-left: 15px;
+        margin-top: 16px;
+        margin-right: 28px;
+      }
+
+      .menu2 li:hover {
+        background-color: var(--hover-link-menu-header);
+      }
+
+      .menu2 li:hover .submenu {
+        display: block;
+      }
+
+      .menu3 {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .menu3 li {
+        display: inline-block;
+        margin-left: 15px;
+        margin-right: 18px;
+        margin-top: 15px;
+      }
+
+      .menu3 li:hover {
+        background-color: var(--hover-link-menu-header);
+      }
+
+      .menu3 li:hover .submenu {
+        display: block;
+      }
+
+      .menu4 {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .menu4 li {
+        display: inline-block;
+        margin-left: 15px;
+        margin-right: 24px;
+        margin-top: 15px;
+      }
+
+      .menu4 li:hover {
+        background-color: var(--hover-link-menu-header);
+      }
+
+      .menu4 li:hover .submenu {
+        display: block;
+      }
+
+      .submenu {
+        display: none;
+        position: absolute;
+        background-color: var(--bg-click-slide-menu);
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .submenu li {
+        display: block;
+      }
+
+      .submenu li:hover {
+        background-color: var(--hover-link-submenu-header);
+      }
+      a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu-24h-main">
+      <ul class="menu1">
+        <li>
+          Video
+          <ul class="submenu">
+            <li>
+              <a href="https://www.youtube.com/watch?v=W4Dp7SveYVA" >Hài</a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/watch?v=uN1Ae_CxYlU" onclick="alert('Bạn đã đủ 18+ ?')">Ma</a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/watch?v=mtqUcfXof-c&t=8s" onclick="alert('Bạn cần phải chuẩn bị tinh thần trước khi xem')"
+                >Kinh dị </a
+              >
+            </li>
+            <li>
+              <a href="https://www.youtube.com/watch?v=Eu4DfUIHFb0">Buồn</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          Kinh Doanh
+          <ul class="submenu">
+            <li>
+              <a href="https://www.24h.com.vn/doanh-nhan-c606.html"
+                >Doanh nhân</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/tai-chinh-c587.html">Tài chính</a>
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/bat-dong-san-c792.html"
+                >Bất động sản</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/khoi-nghiep-c826.html"
+                >Khởi nghiệp</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/doanh-nghiep-c849.html"
+                >Doanh nghiệp</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/ngan-hang-c850.html">Ngân hàng</a>
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/tin-chung-khoan-c566.html"
+                >Chứng khoán</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/ty-gia-ngoai-te-ttcb-c426.html"
+                >Tỷ giá</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/gia-vang-hom-nay-c425.html"
+                >Giá vàng</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/toi-tieu-tien-c851.html"
+                >Tiền tiền tiền</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          Giáo dục
+          <ul class="submenu">
+            <li>
+              <a href="https://www.24h.com.vn/tuyen-sinh-dh-cd-c365.html"
+                >Tuyển sinh ĐH-CĐ</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/day-con-c216e4914.html"
+                >Dạy con</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/tin-tuc-giao-duc-c678.html"
+                >Tin tức giáo dục</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/tuyen-sinh-lop-10-c216e2137.html"
+                >Tuyển sinh lớp 10</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          Khoa học
+          <ul class="submenu">
+            <li>
+              <a href="https://www.24h.com.vn/cong-nghe-thong-tin-c55.html"
+                >Công nghệ thông tin</a
+              >
+            </li>
+            <li><a href="https://www.24h.com.vn/game-c69.html">Game</a></li>
+            <li>
+              <a href="https://www.24h.com.vn/phan-mem-ngoai-c302.html"
+                >Phần mềm</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/khoa-hoc-c782.html">Khoa học</a>
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/mang-xa-hoi-c889.html"
+                >Mạng xã hội</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/thu-thuat-tien-ich-c68.html"
+                >Thủ thuật-Tiện ích</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/tim-hieu-virus-c57.html"
+                >Sợ Viruts???</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/may-in/phu-kien-c291.html"
+                >Máy in/Phụ kiện</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          Tâm sự
+          <ul class="submenu">
+            <li>
+              <a href="https://www.24h.com.vn/ban-tre-cuoc-song-c64.html"
+                >Bạn trẻ-Cuộc sống</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/chuyen-cong-so-c180.html"
+                >Chuyện công sở</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/tinh-yeu-gioi-tinh-c306.html"
+                >Tình yêu-Giới tính</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/ngoai-tinh-c435.html"
+                >Ngoại Tình</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/gioi-tre-c434.html">Giới trẻ</a>
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/hotgirl-hot-boy-c64e3398.html"
+                >Hot girl-Hot boy</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/nhip-song-tre-c685.html"
+                >Nhịp sống trẻ</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          Rao vặt
+          <ul class="submenu">
+            <li>
+              <a href="https://www.24h.com.vn/thi-truong-tieu-dung-c52.html"
+                >Thị trường-Tiêu dùng</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/thi-truong-24h-c341.html"
+                >Thị trường 24h</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/gia-ca-c340.html"
+                >Giá cả hàng hóa</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.24h.com.vn/xu-huong-tieu-dung-doc-la-c825.html"
+                >Xu hướng tiêu dùng độc lạ</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/san-xuat-tieu-dung-c60.html"
+                >Sản xuất tiêu dùng</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/trung-tam-mua-sam-c339.html"
+                >Trung tâm mua sắm</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="menu2">
+        <li>
+          Thời sự
+          <ul class="submenu">
+            <li>
+              <a href="https://www.24h.com.vn/tin-tuc-trong-ngay-c46.html"
+                >Tin tức trong ngày</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/chinh-tri-xa-hoi-c981.html"
+                >Chính trị-Xã hội</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/doi-song-dan-sinh-c982.html"
+                >Đời sống-Dân sinh</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/tai-nan-giao-thong-c408.html"
+                >Giao thông-Đô thị</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/nong-tren-mang-c983.html"
+                >Nóng trên mạng</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/du-bao-thoi-tiet-c568.html"
+                >Dự báo thời tiết</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/lich-van-nien-c936.html"
+                >Lịch vạn niên</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          Giải trí
+          <ul class="submenu">
+            <li>
+              <a href="https://www.24h.com.vn/doi-song-showbiz-c729.html"
+                >Đời sống Showbiz</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/24h-gap-go-c1054.html"
+                >24h Gặp gỡ</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/doi-thoai-cung-sao-c730.html"
+                >Talk với Sao</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/sao-viet-c757.html">Sao Việt</a>
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/ca-nhac-mtv-c73.html">Nhạc </a>
+            </li>
+            <li><a href="https://www.24h.com.vn/phim-c74.html">Phim</a></li>
+          </ul>
+        </li>
+        <li style="margin-left: 61px">
+          Sức khỏe
+          <ul class="submenu">
+            <li>
+              <a href="https://www.24h.com.vn/suc-khoe-doi-song-c62.html"
+                >Sức khỏe đời sống</a
+              >
+            </li>
+            <li>
+              <a href="https://24h.com.vn/benh-dan-ong-c778.html"
+                >Bệnh đàn ông</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/benh-phu-nu-c779.html"
+                >Bệnh phụ nữ</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/dinh-duong-c780.html"
+                >Sức khỏe dinh dưỡng</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/tin-tuc-suc-khoe-c683.html"
+                >Tin tức sức khỏe</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/suc-khoe-tinh-duc-c62e5286.html"
+                >Sức khỏe tình dục</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/phat-minh-y-hoc-c979.html"
+                >Phát minh y học</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li style="margin-left: 25px">
+          Số hóa
+          <ul class="submenu">
+            <li>
+              <a
+                href="https://www.24h.com.vn/kham-pha-cong-nghe/vu-khi-cho-doanh-nghiep-chuyen-doi-so-chuyen-minh-but-pha-kien-tao-tuong-lai-so-c675a1548380.html"
+                >Vũ khí</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.24h.com.vn/kham-pha-cong-nghe/so-hoa-va-doi-moi-dan-duong-cho-cac-doanh-nghiep-nho-tai-viet-nam-mo-rong-quy-mo-c675a1460142.html"
+                >Đường lối</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.24h.com.vn/kinh-doanh/con-sot-mua-sam-trang-suc-bang-cong-nghe-so-hoa-c161a1519496.html"
+                >Mua sắm</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li style="margin-left: 48px">
+          Cười
+          <ul class="submenu">
+            <li>
+              <a href="https://www.24h.com.vn/cuoi-24h-c746.html">Cười 24h</a>
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/video-clip-cuoi-c72.html"
+                >Clip hài hước</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/tranh-vui-c224.html">Tranh vui</a>
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/tieu-pham-hai-c444.html"
+                >Tiểu phẩm hài</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li style="margin-left: 39px">
+          Shop VnExpress
+          <ul class="submenu">
+            <li><a href="https://spx.vn/">SPX</a></li>
+            <li>
+              <a
+                href="https://shopee.vn/?utm_source=coccoc.com&utm_medium=cpc&utm_campaign=VN_COM_SEM_MT4_B_BR%7CShopee&utm_term=%5Bshopee%5D&utm_content=37627826&md=_05be50vdanX7cmsEHDREOluJlz8728sa32DakoSq5ryhHbx*zZG6Fnh91bw5iqlpv*kXFxoA98jmieOXGvhjqTjlHaoAmokG6D4bp5-lZcy6Y1ZABNLRd9RzvOFRvlz2EXVGf"
+                >Shoppe</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.lazada.vn/?trafficFrom=17449020_303586&laz_trackid=2:mm_192751355_53253028_2012253033:clkgk2c8m1hpd42ok17lnp&mkttid=clkgk2c8m1hpd42ok17lnp"
+                >Lazada</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://tiki.vn/?utm_source=coccoc&utm_medium=%5Bsendo%5D_43957508&utm_campaign=DIS_NBR_COC_KWA_SNC_ALL_VN_ALL_UNK_UNK_N.COMPETITORKW-CHUNG_C.TIKI2023_K.NULL_D.101223_S.COC_P.THUY_A.NULL_L.HP_G.A_AG.A&utm_term=%5Bsendo%5D&utm_content=43957508&md=_05be50vdanX7cmsEHDREOluJlD-b988a32DakoSq5ryhHbx*zZG6Fjn19Tuqa6dpfxNjT3HEDtgS1pA5DSkVgltvNhqkFZymBENPdXrGD9yrRB4tuNQPHcxg3c48WdcfDNf4."
+                >Tiki</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="menu3">
+        <li>
+          Góc nhìn
+          <ul class="submenu">
+            <li>
+              <a
+                href="https://www.24h.com.vn/bong-da/goc-nhin-khac-ve-thay-tro-hlv-troussier-c48a1478053.html"
+                >Bóng đá</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.24h.com.vn/doanh-nhan/ky-nang-giai-quyet-van-de-linh-hoat-qua-goc-nhin-ceo-tony-vu-nha-sang-lap-job3svn-c606a1514925.html"
+                >Kinh doanh</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.24h.com.vn/ban-tre-cuoc-song/cuong-buc-yeu-tu-goc-nhin-khoa-hoc-c64a1525064.html"
+                >Bạn trẻ-Cuộc sống</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.24h.com.vn/suc-khoe-doi-song/goc-nhin-chan-thuc-ve-cuoc-song-cua-dan-toc-thieu-so-rat-it-nguoi-duoc-lan-toa-tren-mang-xa-hoi-c62a1163134.html"
+                >Sức khỏe đời sống</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          Thể thao
+          <ul class="submenu">
+            <li>
+              <a href="https://www.24h.com.vn/tennis-c119.html">Tennis</a>
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/vo-thuat-ufc-quyen-anh-c117.html"
+                >Võ thuật-UFC-Quyền Anh</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/lich-thi-dau-the-thao-c386.html"
+                >Lịch thi đấu thể thao</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.24h.com.vn/hau-truong-ngoi-sao-the-thao-c797.html"
+                >Người đẹp-Ngôi sao</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/bong-chuyen-c796.html"
+                >Bóng chuyền</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/lich-thi-dau-tennis-c440.html"
+                >Lịch thi đấu Tennis</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li style="margin-left: 62px">
+          Gia đình
+          <ul class="submenu">
+            <li>
+              <a
+                href="https://www.24h.com.vn/nhung-chuyen-gia-dinh-c64e3400.html"
+                >Bạn trẻ-Cuộc sống</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.24h.com.vn/giao-duc-du-hoc/10-quy-tac-trong-doi-song-gia-dinh-cha-me-nen-ap-dung-day-con-de-con-cai-phat-trien-toan-dien-hon-c216a1546667.html"
+                >Giáo dục-Du học</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li style="margin-left: 40px">
+          Xe
+          <ul class="submenu">
+            <li><a href="https://www.24h.com.vn/o-to-c747.html">Ô tô</a></li>
+            <li>
+              <a href="https://www.24h.com.vn/tin-tuc-o-to-c332.html"
+                >Tin tức ô tô</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/bang-gia-xe-o-to-c807.html"
+                >Bảng giá xe ô tô</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/tu-van-c240.html">Tư vấn</a>
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/anh-nguoi-dep-va-xe-c199.html"
+                >Ngắm xe</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/so-sanh-xe-c805.html"
+                >Đánh gía xe</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/clip-giao-thong-c962.html"
+                >Clip giao thông</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/tra-cuu-o-to-c992.html"
+                >Tra cứu ô tô</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li style="margin-left: 81px">
+          Ảnh
+          <ul class="submenu">
+            <li>
+              <a
+                href="https://www.24h.com.vn/chiem-nguong-anh-dep-the-gioi-c76e3321.html"
+                >Du lịch</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.24h.com.vn/999-hinh-anh-coi-chung-nhin-nham-c746e3675.html"
+                >Cười 24h</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.24h.com.vn/tin-tuc-quoc-te/nhung-buc-anh-hiem-khac-biet-ve-tong-thong-nga-putin-c415a1335184.html"
+                >Thế giới</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li style="margin-left: 55px">
+          Pay VnExpress
+          <ul class="submenu">
+            <li>
+              <a
+                href="https://www.24h.com.vn/thi-truong-tieu-dung/thu-vi-voi-may-ban-hang-tu-dong-thanh-toan-bang-qr-pay-c52a916295.html"
+                >Thị trường-Tiêu dùng</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="menu4">
+        <li>
+          Thế giới
+          <ul class="submenu">
+            <li>
+              <a href="https://www.24h.com.vn/diem-nong-c704.html">Điểm nóng</a>
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/quan-su-c705.html">Quân sự</a>
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/the-gioi-dong-vat-c415e3793.html"
+                >Thể giới động vật</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/theo-dong-lich-su-c706.html"
+                >Theo dòng lịch sử</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.24h.com.vn/chuyen-cung-dinh-trung-hoa-c415e6745.html"
+                >Cung đình Trung Hoa</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/dai-ky-c1082.html">Dài Kỳ</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          Pháp luật
+          <ul class="submenu">
+            <li>
+              <a href="https://www.24h.com.vn/vu-an-noi-tieng-c163.html"
+                >Vụ án nổi tiếng</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/trong-an-c443.html">Trọng án</a>
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/ky-an-the-gioi-c767.html"
+                >Kỳ án thế giới</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/trat-tu-xa-hoi-c442.html"
+                >Trật tự xã hội</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/canh-giac-c470.html">Cảnh giác</a>
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/ho-so-vu-an-c135.html"
+                >Hồ sơ vụ án</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li style="margin-left: 51px">
+          Du lịch
+          <ul class="submenu">
+            <li>
+              <a href="https://www.24h.com.vn/du-lich-viet-nam-c501.html"
+                >Du lịch Việt Nam</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.24h.com.vn/kham-pha-du-lich-trung-quoc-c76e3322.html"
+                >Du lịch Trung Quốc</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/du-lich-chau-au-c76e4684.html"
+                >Du lịch Châu Âu</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/du-lich-chau-a-c76e4832.html"
+                >Du lịch Châu Á</a
+              >
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/tin-tuc-du-lich-c682.html"
+                >Tin tức du lịch</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.24h.com.vn/tra-cuu-dia-diem-du-lich-c1029.html"
+                >Tra cứu địa điểm du lịch</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li style="margin-left: 39px">
+          Công cộng
+          <ul class="submenu">
+            <li>
+              <a
+                href="https://www.24h.com.vn/tin-tuc-trong-ngay/khoi-to-vu-an-gay-roi-trat-tu-cong-cong-tai-khu-kinh-te-nghi-son-c46a1512626.html"
+                >Tin tức trong ngày</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.24h.com.vn/du-lich-24h/co-gi-trong-nha-tam-cong-cong-noi-tieng-bac-nhat-thoi-ky-la-ma-cach-day-hang-nghin-nam-c76a1192718.html"
+                >Du lịch</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.24h.com.vn/an-ninh-hinh-su/ngan-chan-30-thanh-nien-gay-roi-trat-tu-cong-cong-tai-huyen-dong-anh-c51a1532455.html"
+                >Pháp luật</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li style="margin-left: 25px">
+          Infographics
+          <ul class="submenu">
+            <li>
+              <a href="https://www.24h.com.vn/media-24h-c762.html">MEDIA</a>
+            </li>
+            <li><a href="https://www.24h.com.vn/video-c766.html">Video</a></li>
+            <li>
+              <a href="https://www.24h.com.vn/magazine-c934.html">Magazine</a>
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/trac-nghiem-c777.html">Quiz</a>
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/podcast-c1035.html">Podcast</a>
+            </li>
+            <li>
+              <a href="https://www.24h.com.vn/anh-chat-luong-cao-c1078.html"
+                >Photo</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li style="margin-left: 0px">
+          Quà tặng
+          <ul class="submenu">
+            <li>
+              <a
+                href="https://www.24h.com.vn/tin-tuc-am-thuc/gio-qua-tet-2024-bo-suu-tap-qua-tang-sang-trong-va-doc-dao-cua-happybox-c677a1531923.html"
+                >Ẩm thực</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.24h.com.vn/the-gioi-thoi-trang/goi-y-nhung-mon-qua-tang-tet-y-nghia-va-thiet-thuc-c672a1537392.html"
+                >Thời trang</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.24h.com.vn/ban-tre-cuoc-song/9-y-tuong-tang-qua-valentine-khien-nang-do-guc-ngay-tuc-thi-c64a1439641.html"
+                >Bạn trẻ-Cuộc sống</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.24h.com.vn/thi-truong-24h/4-qua-tang-cong-nghe-bien-ban-thanh-ngoan-xinh-yeu-trong-mat-me-dip-83-c341a1547092.html"
+                >Thị trường-Tiêu dùng</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
